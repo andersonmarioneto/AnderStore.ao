@@ -1,0 +1,214 @@
+/* Style by: Anderson Mário Neto | UI Designer, Front-End */
+
+/* Font.Google Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variaveis de Ambiente */
+:root {
+    /* Cores */
+    --branco: #fff;
+    --sinza: #444444;
+    --azul: #00A3FF;
+
+    /* Tipografia */
+    --font: "Poppins", sans-serif;
+    --font-tamanho: 1rem;
+    --font-tamanho-h1: 1.75rem;
+    --font-tamanho-pequeno: .813rem;
+    --font-peso: 500;
+}
+
+/* Configurações BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, input, button {
+    font-size: var(--font-tamanho);
+    font-family: var(--font);
+}
+
+body {
+    color: var(--branco);
+    /* img */
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* img funfo*/
+.login-img {
+    position: absolute;
+    width: 100vw;
+    height:  100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Login */
+.login {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.login-form {
+    position: relative;
+    background-color: hsla(0, 0%, 10%, .1);
+    /*border: 1px solid var(--branco);*/
+    margin-inline: 1.5rem; 
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+}
+
+.login-titulo {
+    text-align: center;
+    font-size: var(--font-tamanho-h1);
+    font-weight: var(--font-peso);
+    margin-bottom: 2rem;
+}
+
+.login-content, .login-box {
+    display: grid;
+}
+
+.login-content {
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-box {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--branco);
+}
+
+.login-icon, .login-eye {
+    font-size:  1.25rem;
+}
+
+.login-input {
+    width: 100%;
+    padding-block: .8rem;
+    background: none;
+    color: var(--branco);
+    position: relative;
+    z-index: 1;
+}
+
+.login-box-input {
+    position: relative;
+}
+
+.login-label {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-weight: var(--font-peso);
+    transition: top .3s, font-size .3s;
+}
+
+.login-eye {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.login-box:nth-child(2) input {
+    padding-right: 1.8rem;
+}
+
+.login-check, .login-check-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-check {
+    margin-bottom: 1.5rem;
+}
+
+.login-check-label, .login-forgot, .login-register {
+    font-size: var(--font-tamanho-pequeno);
+}
+
+.login-check-group {
+    column-gap: .5rem;;
+}
+
+.login-check-input {
+    width: 16px;
+    height: 16px;
+}
+
+.login-forgot {
+    color: var(--sinza);
+}
+
+.login-forgot:hover {
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--azul);
+    color: var(--branco);
+    font-weight: var(--font-peso);
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.login-register {
+    text-align: center;
+}
+
+.login-register a{
+    color: var(--sinza);
+    font-weight: var(--font-peso);
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+/* Movimento das letras no input */
+.login-input:focus + .login-label {
+    top: -12px;
+    font-size: var(--font-tamanho-pequeno);
+}
+
+/* Fixar o movimento das letras */
+.login-input:not(:placeholder-shown).login-input:not(:focus) + .login-label {
+    top: -12px;
+    font-size: var(--font-tamanho-pequeno);
+}
+
+/* Responsividade */
+@media screen and (min-width: 576px) {
+    .login {
+        justify-content: center;
+    }
+    .login-form {
+        width: 432px;
+        padding: 4rem 3rem 3.5rem;
+        border-radius: 1.5rem;
+    }
+    .login-titulo {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,75 @@
+/* Style by: Anderson Mário Neto | UI Designer, Front-End */
+
+/* Font.Google Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variaveis de Ambiente */
+:root {
+    /* Cores */
+    --branco: #fff;
+    --preto: #000;
+
+    /* Tipografia */
+    --font: "Poppins", sans-serif;
+    --font-tamanho: 1rem;
+    --font-peso: 500;
+}
+
+/* Configurações BASE */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, input, button {
+    font-size: var(--font-tamanho);
+    font-family: var(--font);
+}
+
+body {
+    color: var(--preto);
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Login %5*/
+.login-form {
+    position: relative;
+    background-color: hsla(0, 0%, 10%, .1);
+    border: 2px solid var(--branco);
+    margin-inline: 1.5rem; 
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+}
+
+.login-titulo {
+    text-align: center;
+    font-size: var(--font-tamanho);
+    font-weight: var(--font-peso);
+    margin-bottom: 2rem;
+}
+
+.login-content, .login-box {
+    display: grid;
+}
+
+.login-content {
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-box {
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--branco);
+}

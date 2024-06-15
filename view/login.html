@@ -1,11 +1,64 @@
+<!-- by: Anderson Mário Neto | UI Designer, Front-End -->
+
 <!DOCTYPE html>
 <html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - AnderStore.ao</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/Login.css">
+
+    <!-- Pacote de icones Remixicon.com -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    login
+    <div class="login">
+        <img src="img/Logotipo - AnderStore.png" class="img-login">
+
+        <form action="" class="login-form">
+            <h1 class="login-titulo">Login</h1>
+
+            <div class="login-content">
+                <div class="login-box">
+                    <i class="ri-user-3-line login-icon"></i>
+
+                    <div class="login-box-input">
+                        <input type="text" placeholder=" " required class="login-input">
+                        <label for="" class="login-label">Nome de Usuário</label>
+                    </div>
+                </div>
+
+                <div class="login-box">
+                    <i class="ri-lock-2-line login-icon"></i>
+
+                    <div class="login-box-input">
+                        <input type="password" placeholder=" " required class="login-input" id="login-pass">
+                        <label for="" class="login-label">Palavra-passe</label>
+                        <i class="ri-eye-off-line login-eye" id="login-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-check">
+                <div class="login-check-group">
+                    <input type="checkbox" class="login-check-input">
+                    <label for="" class="login-check-label">Lembrar-me</label>
+
+                    <a href="#" class="login-forget">Esqueceu a sua palavra-passe?</a>
+                </div>
+            </div>
+
+            <button class="login-button">ENTRAR</button>
+
+            <p class="login-register">
+                Não tem uma coonta? <a href="#">CRIAR NOVA CONTA</a>
+            </p>
+        </form>
+    </div>
+
+    <!-- Interações JS -->
+    <script src="js/login.js"></script>
 </body>
 </html>

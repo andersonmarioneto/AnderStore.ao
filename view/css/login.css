@@ -32,8 +32,6 @@ body, input, button {
 
 body {
     color: var(--branco);
-    /* img */
-}
 
 input, button {
     border: none;
@@ -155,7 +153,7 @@ a {
 }
 
 .login-forgot {
-    color: var(--sinza);
+    color: var(--azul);
 }
 
 .login-forgot:hover {
@@ -178,7 +176,7 @@ a {
 }
 
 .login-register a{
-    color: var(--sinza);
+    color: var(--azul);
     font-weight: var(--font-peso);
 }
 
